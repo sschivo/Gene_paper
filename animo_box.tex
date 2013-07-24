@@ -1,0 +1,93 @@
+
+%FIRST EXAMPLE STYLE
+
+\tikzset{titregris/.style =
+{draw=gray, thick, fill=white, shading = exersicetitle, %
+text=black!70, rectangle, rounded corners, right,minimum height=.7cm}}
+\pgfdeclarehorizontalshading{exersicebackground}{100bp}
+{color(0bp)=(green!20); color(100bp)=(black!5)}
+\pgfdeclarehorizontalshading{exersicetitle}{100bp}
+{color(0bp)=(green!20);color(100bp)=(blue!5!white)}
+\makeatletter
+\mdfdefinestyle{ANIMOstyle}{%
+nobreak=true,
+outerlinewidth=1em,outerlinecolor=white,%
+leftmargin=-1em,rightmargin=-1em,%
+middlelinewidth=1.2pt,roundcorner=5pt,linecolor=gray,
+apptotikzsetting={\tikzset{mdfbackground/.append style ={%
+shading = exersicebackground}}},
+innertopmargin=1.2\baselineskip,
+skipabove={\dimexpr0.5\baselineskip+\topskip\relax},
+skipbelow={-1em},
+needspace=3\baselineskip,
+frametitlefont=\sffamily\bfseries,
+singleextra={%
+\node[titregris,xshift=0.5cm] at (P-|O) %
+{~\mdf@frametitlefont{\small What is ANIMO?}\hbox{~}};},
+}
+\makeatother
+
+\begin{mdframed}[style=ANIMOstyle]
+\pretolerance=2000
+\scriptsize
+ANIMO (Analysis of Networks with Interactive MOdeling)
+is a software tool that allows the biologists to virtually \emph{play} with abstract network models.
+Such models are based on cause-and-effect relationships, such as ``A activates B'', and their
+behavior is described in semi-quantitative terms. This approach requires less precise knowledge about
+kinetic parameters, while still enabling the user to easily investigate the dynamics of a modeled network.
+
+The idea at the base of ANIMO is to provide experts with a means to visually represent their knowledge on biological interactions.
+Networks created in this way are then enriched with simplified kinetics, producing \emph{dynamic models}.
+Thanks to the Cytoscape-based user interface, the visual representation of a pathway available in ANIMO
+closely resembles the networks commonly found in textbooks.
+
+The network topology, equipped with informations
+on its dynamic behavior, is automatically translated to an underlying formal model based on Timed Automata.
+The formal model is used \emph{behind the scenes} to simulate the evolution of the network.
+In a few seconds of computation, ANIMO presents the user with a graph plotting the levels of activation
+of all components in the network during the simulation period.
+A slider under the graph lets the user further explore the evolution of the model:
+moving the slider makes the coloration of the network instantly reflect the activity of
+all components along the simulation interval.
+\end{mdframed}
+
+
+
+%SECOND EXAMPLE
+
+
+\mdfdefinestyle{ANIMObox}{%
+    nobreak=true,
+    outerlinecolor = gray!80!black,
+    outerlinewidth=2pt,
+    roundcorner=20pt,
+    innertopmargin=\baselineskip,
+    innerbottommargin=\baselineskip,
+    innerrightmargin=10pt,
+    innerleftmargin=10pt,
+    backgroundcolor = gray!20!white}
+
+\begin{mdframed}[style=ANIMObox]
+{\bf Analysis of Networks with Interactive MOdeling}
+\pretolerance=2000
+
+\small
+ANIMO is a software tool that allows the biologists to virtually \emph{play} with abstract network models.
+Such models are based on cause-and-effect relationships, such as ``A activates B'', and their
+behavior is described in semi-quantitative terms. This approach requires less precise knowledge about
+kinetic parameters, while still enabling the user to easily investigate the dynamics of a modeled network.
+
+The idea at the base of ANIMO is to provide experts with a means to visually represent their knowledge on biological interactions.
+Networks created in this way are then enriched with simplified kinetics, producing \emph{dynamic models}.
+Thanks to the Cytoscape-based user interface, the visual representation of a pathway available in ANIMO
+closely resembles the networks commonly found in textbooks.
+
+The network topology, equipped with informations
+on its dynamic behavior, is automatically translated to an underlying formal model based on Timed Automata.
+The formal model is used \emph{behind the scenes} to simulate the evolution of the network.
+In a few seconds of computation, ANIMO presents the user with a graph plotting the levels of activation
+of all components in the network during the simulation period.
+A slider under the graph lets the user further explore the evolution of the model:
+moving the slider makes the coloration of the network instantly reflect the activity of
+all components along the simulation interval.
+\end{mdframed}

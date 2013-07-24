@@ -1,0 +1,46 @@
+
+
+Table~\ref{tab:pcr-effects} shows the measured effects of treatments with IL-1$\beta$ and Wnt-3a
+on the expression of some proteins in chondrocyte donor cells.
+The table shows that both cytokines cause effects on the measured protein concentrations. Moreover,
+the combined action of the two treatments is not always the sum of the
+two isolated cases (see for example Sox9 and ColIIa).
+Finally, the transcriptional response to the treatments may vary over time (see the case of ColIIa
+under Wnt-3a treatment, and experimental data in Suppl. Mat.).
+From this we infer that the signaling pathways of IL-1$\beta$ and Wnt-3a have some common
+parts, possibly upstream of their target transcription factors.
+As time is an important variable when considering crosstalk events, we propose to build
+a computational model of the dynamics of the two pathways.
+Such an \emph{in silico} model should allow us to identify the key interactions in the crosstalk.
+Thanks to the model, we will be able to refine our current
+knowledge on the studied network by identifying specifically targeted laboratory experiments.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|l||l|l|lcl|}
+\hline%
+%     & 10 ng/ml IL-1$\beta$ & 75 ng/ml Wnt-3a & 10 ng/ml IL-1$\beta$ + \\
+%     & & & 75 ng/ml Wnt-3a \\
+&\multicolumn{1}{|c|}{IL-1$\beta$}&\multicolumn{1}{|c|}{Wnt-3a}&\multicolumn{1}{|c}{IL-1$\beta$}&\hspace{-5mm}+\hspace{-5mm}&\multicolumn{1}{c|}{\hspace{-5mm}Wnt-3a}\\[-1ex]%
+&\multicolumn{1}{|c|}{\scriptsize10 ng/ml}&\multicolumn{1}{|c|}{\scriptsize75 ng/ml}&\multicolumn{1}{|c}{\scriptsize10 ng/ml}&{}&\multicolumn{1}{c|}{\hspace{-5mm}\scriptsize75 ng/ml}  \\
+\hline
+\hline
+  IL-1$\beta$ & $+++$ & $-$ & $++$ & & \\
+\hline
+  Axin & $-$ & $++$ & $+$ & & \\
+\hline
+%  ID1 & $+$ & $++$ & $+$ & & \\
+% \hline
+  Sox9 & $+$ & $-$ & $-$ & & \\
+\hline
+  ColIIa & $-$ & $-/+$ & $-$ & & \\
+\hline
+\end{tabular}
+\caption{The effects of treatments with IL-1$\beta$ and Wnt-3a on the expression of some proteins
+in human knee chondrocytes. Effects were measured
+as n-fold variations with respect to the initial concentrations, and are represented in the table as follows:
+$+$ under 10 times increase; $++$ more than 10 but less than 100 times increase;
+$+++$ more than 100 times increase. Similarly, $-$ means less than 10 times decrease.
+We use $-/+$ in one case to indicate that treatment with Wnt-3a causes
+an initial decrease ($\sim{}0.5$-fold) followed by an increase ($\sim{}2$-fold) in the production of ColIIa. \label{tab:pcr-effects}}
+\end{table}
